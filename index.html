@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./css/bootstrap.css" />
+		<link rel="stylesheet" href="./css/bootstrap-responsive.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<script defer src="./js/main.js"></script>
+		<script defer src="./js/saveToFile.js"></script>
+		<script defer src="./js/loadFromFile.js"></script>
+		<script defer src="./js/manipulateTable.js"></script>
+		<script defer src="./js/validation.js"></script>
+		<title>Orders</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="well">
+				<form class="form-horizontal" action="./php/saveToJson.php" method="POST">
+					<fieldset>
+						<div class="control-group">
+							<label class="control-label" for="name">Product Name</label>
+							<div class="controls">
+								<input
+									name="name"
+									type="text"
+									placeholder="Product Name"
+									class="input-xlarge"
+								/>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="quantity">Quantity in stock</label>
+							<div class="controls">
+								<input
+									name="quantity"
+									type="digits"
+									placeholder="Quantity in stock"
+									class="input-xlarge"
+								/>
+							</div>
+						</div>
+						<div class="control-group">
+							<label class="control-label" for="unit_price">Price per item</label>
+							<div class="controls">
+								<input
+									name="unit_price"
+									type="float"
+									placeholder="Price per item"
+									class="input-xlarge"
+								/>
+							</div>
+						</div>
+					</fieldset>
+					<div class="form-actions">
+						<input class="btn btn-primary" type="submit" value="Submit" />
+						<input class="btn" type="reset" value="Reset" />
+					</div>
+				</form>
+			</div>
+			<div class="well">
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>Product name</th>
+							<th>Quantity in stock</th>
+							<th>Price per item</th>
+							<th>Datetime submitted</th>
+							<th>Total value number</th>
+						</tr>
+					</thead>
+					<tbody></tbody>
+					<tfoot>
+						<tr>
+							<th>Total</th>
+							<th colspan="4" class="total-value">0 $</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

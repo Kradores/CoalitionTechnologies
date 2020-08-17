@@ -1,0 +1,8 @@
+tfoot th.total-value {
+	text-align: right;
+}
+
+tr.error {
+	color: #b94a48;
+	font-weight: bold;
+}
